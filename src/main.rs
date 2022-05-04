@@ -16,7 +16,7 @@ struct IndexTemplate {
 #[derive(Error, Debug)]
 enum MyError {
     #[error("failed to render HTML")]
-    AskamaError(#[from] askama::Error)
+    AskamaError(#[from] askama::Error),
 }
 
 impl ResponseError for MyError {}
